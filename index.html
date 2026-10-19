@@ -151,8 +151,9 @@ position:fixed;
 inset:0;
 background:transparent;
 display:flex;
-align-items:flex-start;
-justify-content:center;
+flex-direction:column;
+align-items:stretch;
+justify-content:flex-start;
 z-index:5;
 padding-top:var(--safe-top);
 }
@@ -160,7 +161,8 @@ padding-top:var(--safe-top);
 .card{
 width:100%;
 max-width:390px;
-align-self:stretch;
+align-self:center;
+flex:1 1 auto;
 height:auto;
 min-height:0;
 background:var(--card);
@@ -478,7 +480,7 @@ body{display:flex;justify-content:center}
 .ticket-view{width:calc(100% / var(--ui-scale))}
 .success{font-size:27px}
 .price{font-size:42px}
-.card{max-width:none;width:100%}
+.card{max-width:none;width:100%;align-self:stretch}
 .overlay{left:0;right:0;width:100%}
 .panel-card,
 .scanner-card{max-height:calc(100dvh - 28px - var(--safe-bottom));overflow:auto}
